@@ -1,0 +1,29 @@
+{
+  "name": "mean-stack-training",
+  "version": "1.0.0",
+  "description": "MEAN Stack Training from Udemy",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanaugusto/mean-stack-training.git"
+  },
+  "keywords": [
+    "mean",
+    "stack"
+  ],
+  "author": "Juan Augusto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanaugusto/mean-stack-training/issues"
+  },
+  "homepage": "https://github.com/juanaugusto/mean-stack-training#readme",
+  "dependencies": {
+    "express": "^4.15.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
