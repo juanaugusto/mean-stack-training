@@ -7,6 +7,7 @@
 # you're doing.
 Vagrant.configure("2") do |config|
   config.vm.box = "fedora/25-cloud-base"
+  config.vm.provision "shell", path: "provision.sh"
   config.vm.network "private_network", ip: "10.0.0.2", netmask: "255.255.255.0"
   config.vm.hostname = "MEAN-STACK-TRAINING"
   config.vm.synced_folder ".", "/vagrant", type: "nfs"
