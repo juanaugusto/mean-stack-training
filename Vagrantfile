@@ -5,18 +5,16 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
+# needed to install vagrant-vbguest before
 Vagrant.configure("2") do |config|
-  config.vm.box = "fedora/25-cloud-base"
+  config.vm.box = "ubuntu/trusty64"
   config.vm.provision "shell", path: "provision.sh"
   config.vm.network "private_network", ip: "10.0.0.2", netmask: "255.255.255.0"
   config.vm.hostname = "MEAN-STACK-TRAINING"
-  config.vm.synced_folder ".", "/vagrant", type: "nfs"
 
-  config.vm.provider :libvirt do |domain|
-    domain.memory = 512
-    domain.cpus = 2
-    domain.nested = true
-    domain.volume_cache = 'none'
+  config.vm.provider "virtualbox" do |vb|
+    vb.cpus = 2
+    vb.memory = 512
   end
 
 end
