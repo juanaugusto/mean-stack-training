@@ -12,3 +12,6 @@ echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3
 sudo apt-get update
 sudo apt-get install -y mongodb-org
 
+# Installing nodemon as globally (do not use it in production systems)
+sudo npm install -g nodemon
+
